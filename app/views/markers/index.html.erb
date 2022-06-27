@@ -1,8 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Markers</h1>
 
 <div id="markers">
+  <h1>Markers</h1>
   <% @markers.each do |marker| %>
     <%= render marker %>
     <p>
@@ -12,6 +12,6 @@
 </div>
 
 <%= link_to "New marker", new_marker_path %>
-<%= link_to "Delete all markers", deleteAll_path, data: { turbo_method: :delete} %>
+<%= link_to "🗑️ Delete all markers", deleteAll_path, data: { turbo_method: :delete} %>
 
 
