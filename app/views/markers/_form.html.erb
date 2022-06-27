@@ -1,0 +1,27 @@
+<%= form_with(model: marker) do |form| %>
+  <% if marker.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(marker.errors.count, "error") %> prohibited this marker from being saved:</h2>
+
+      <ul>
+        <% marker.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :lat, style: "display: block" %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div>
+    <%= form.label :lng, style: "display: block" %>
+    <%= form.text_field :lng %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
